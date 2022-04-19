@@ -1,6 +1,11 @@
+import Users from "../../models/users.js";
+
 const userResolver = {
     Query: {
-        getUsers: () => users,
+        getUsers: async () => {
+            const res = await Users.find();
+            return res;
+        }
     },
 };
 
