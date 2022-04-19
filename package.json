@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/saureth/message-bot-back/issues"
   },
-  "homepage": "https://github.com/saureth/message-bot-back#readme"
+  "homepage": "https://github.com/saureth/message-bot-back#readme",
+  "dependencies": {
+    "apollo-server": "^3.6.7",
+    "graphql": "^16.3.0"
+  }
 }
