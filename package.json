@@ -1,0 +1,20 @@
+{
+  "name": "message-bot-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saureth/message-bot-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saureth/message-bot-back/issues"
+  },
+  "homepage": "https://github.com/saureth/message-bot-back#readme"
+}
