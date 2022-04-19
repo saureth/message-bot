@@ -14,3 +14,5 @@ const typeDefUser = gql`
         getUsers: [User]
     }
 `;
+
+export default typeDefUser;
