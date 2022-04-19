@@ -21,6 +21,7 @@
   "homepage": "https://github.com/saureth/message-bot-back#readme",
   "dependencies": {
     "apollo-server": "^3.6.7",
+    "dotenv": "^16.0.0",
     "graphql": "^16.3.0",
     "mongoose": "^6.3.0"
   },
