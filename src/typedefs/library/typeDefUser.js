@@ -7,7 +7,7 @@ const typeDefUser = gql`
         fullname: String
         email: String
         pass: String
-        usertype: Number
+        usertype: Int
     }
 
     type Query {
