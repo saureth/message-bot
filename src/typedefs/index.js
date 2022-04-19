@@ -1,4 +1,4 @@
-import typeDefUser from "./library/typeDefUser";
+import typeDefUser from "./library/typeDefUser.js";
 
 const typeDefs = [
     typeDefUser
