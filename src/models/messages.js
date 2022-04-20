@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema(
   {
-    category: Number,
+    category: { type : mongoose.ObjectId, ref: 'Categories' },
     text: String,
   },
   { collection: "messages" }
