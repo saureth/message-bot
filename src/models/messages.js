@@ -8,4 +8,4 @@ const Schema = mongoose.Schema(
   { collection: "messages" }
 );
 
-export default mongoose.model("Messages", Schema)
+export default mongoose.model("Messages", Schema);
