@@ -4,7 +4,7 @@ const typeDefMessage = gql`
 
     type Message {
         id: ID
-        category: Int
+        category: Category
         text: String
     }
 

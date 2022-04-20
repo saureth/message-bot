@@ -6,7 +6,7 @@ const Schema = mongoose.Schema(
     email: String,
     pass: String,
     usertype: Number,
-    messageList:[{ type : mongoose.ObjectId, ref: 'Messages' }],
+    messageList:[{ type : mongoose.Schema.Types.ObjectId, ref: 'Messages' }],
   },
   { collection: "users" }
 );
