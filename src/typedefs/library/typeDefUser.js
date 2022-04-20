@@ -8,6 +8,7 @@ const typeDefUser = gql`
         email: String
         pass: String
         usertype: Int
+        messageList: [ID]
     }
 
     type Query {
