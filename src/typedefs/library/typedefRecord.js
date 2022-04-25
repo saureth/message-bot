@@ -11,7 +11,7 @@ const typeDefRecord = gql`
     }
 
     type Query {
-        getRecord: [Record]
+        getAllRecords: [Record]
     }
 `;
 
