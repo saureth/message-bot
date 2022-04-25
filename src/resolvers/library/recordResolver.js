@@ -15,6 +15,21 @@ const recordResolver = {
                     }
                 })
             return res;
+        },
+        getRecordBySenderId: async (_, args) => {
+            const { _sender } = args;
+            const res = await record.find({sender: _sender})
+                .populate('sender')
+                .populate('receiver')
+                .populate('message')
+                .populate({
+                    path: 'message',
+                    populate: {
+                      path: 'category',
+                      model: 'Categories'
+                    }
+                }); 
+            return res;
         }
     },
 };
