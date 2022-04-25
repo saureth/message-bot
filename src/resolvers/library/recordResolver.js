@@ -2,8 +2,18 @@ import record from "../../models/record.js";
 
 const recordResolver = {
     Query: {
-        getRecord: async () => {
-            const res = await record.find();
+        getAllRecords: async () => {
+            const res = await record.find()
+                .populate('sender')
+                .populate('receiver')
+                .populate('message')
+                .populate({
+                    path: 'message',
+                    populate: {
+                      path: 'category',
+                      model: 'Categories'
+                    }
+                })
             return res;
         }
     },
