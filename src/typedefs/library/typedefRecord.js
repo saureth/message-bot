@@ -13,6 +13,7 @@ const typeDefRecord = gql`
     type Query {
         getAllRecords: [Record]
         getRecordBySenderId(_sender: ID!): [Record]
+        getRecordByReceiverId(_receiver: ID!): [Record]
     }
 `;
 
