@@ -21,6 +21,8 @@
   "homepage": "https://github.com/saureth/message-bot-back#readme",
   "dependencies": {
     "apollo-server": "^3.6.7",
+    "apollo-server-errors": "^3.3.1",
+    "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
