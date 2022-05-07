@@ -1,4 +1,16 @@
 import Users from "../../models/users.js";
+import jwt from 'jsonwebtoken';
+const createToken = (user) => {
+    const email = user.email;
+    return jwt.sign(
+        { user_id: user._id, email },
+        secretKey,
+        {
+            expiresIn: "2h"
+        }
+    );
+}
+const secretKey = 'Juan hijueputa';
 
 const userResolver = {
     Query: {
