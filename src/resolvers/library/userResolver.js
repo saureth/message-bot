@@ -13,8 +13,20 @@ const userResolver = {
                     }
                 })
             return res;
+        },
+        getUserById: async(_, args) => {
+            const { userId } = args;
+            const res = Users.findById(userId);
+            return res;
+        },
+        getUserByEmail: async(_, args) => {
+            const { email } = args;
+            const res = Users.find({
+                email: email
+            });
+            return res;
         }
-    },
+    }
 };
 
 export default userResolver;

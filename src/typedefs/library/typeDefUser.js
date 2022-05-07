@@ -14,6 +14,8 @@ const typeDefUser = gql`
 
     type Query {
         getUsers: [User]
+        getUserById(userId: ID!): User
+        getUserByEmail(email: ID!): User
     }
 
     input LoginInput {
