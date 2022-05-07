@@ -15,6 +15,12 @@ const typeDefUser = gql`
     type Query {
         getUsers: [User]
     }
+
+    input LoginInput {
+        email: String
+        password: String
+    }
+
 `;
 
 export default typeDefUser;
