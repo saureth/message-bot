@@ -23,6 +23,10 @@ const typeDefUser = gql`
         password: String
     }
 
+    type Mutation {
+        loginUser(loginInput: LoginInput): User
+    }
+
 `;
 
 export default typeDefUser;

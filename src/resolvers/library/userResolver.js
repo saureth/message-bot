@@ -1,5 +1,9 @@
 import Users from "../../models/users.js";
+import * as bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import { ApolloError } from "apollo-server-errors";
+import { getUserByEmail } from "./userService.js";
+
 const createToken = (user) => {
     const email = user.email;
     return jwt.sign(
@@ -30,13 +34,21 @@ const userResolver = {
             const { userId } = args;
             const res = Users.findById(userId);
             return res;
-        },
-        getUserByEmail: async(_, args) => {
-            const { email } = args;
-            const res = Users.find({
-                email: email
-            });
-            return res;
+        }
+    },
+    Mutation: {
+        loginUser: async (_, {loginInput: {email, password}}) => {
+            const user = await getUserByEmail(_,{email});
+            if(!!user && await bcrypt.compare(password,user.pass)) {
+                const tkn = createToken(user);
+                user.token = tkn;
+                console.log('autenticado');
+                return user;
+            }
+            else {
+                throw new ApolloError('Incorrect password', 'INCORRECT_PASSWORD');
+            }
+            return user;
         }
     }
 };
