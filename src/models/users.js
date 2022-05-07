@@ -2,11 +2,12 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema(
   {
-    fullname: String,
-    email: String,
+    fullname: { type: String, default: null},
+    email: { type: String, unique: true },
     pass: String,
-    usertype: Number,
+    usertype: {type: Number, default: 1},
     messageList:[{ type : mongoose.Schema.Types.ObjectId, ref: 'Messages' }],
+    token: String
   },
   { collection: "users" }
 );
